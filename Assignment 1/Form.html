@@ -1,0 +1,103 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Task 4 - Form</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container jumbotron formTextstyle">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <h3>Form</h3>
+            <hr>
+            <form>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <span class="glyphicon glyphicon-user"></span><label>Name:</label><span class="textRed">*</span>
+                        <input id="txtName" type="text" class="form-control" placeholder="Enter your Name" />
+                        <span class="textRed" id="errMessageName"></span>
+                    </div>
+                    <div class="form-group">
+                        <span class="glyphicon glyphicon-earphone"></span><label for="Password">Mobile No.:</label><span class="textRed">*</span>
+                        <input id="txtMobileNo" type="number" class="form-control" placeholder="" />
+                        <span class="textRed" id="errMessageMobileNo"></span>
+                    </div>
+                    <div class="form-group">
+                        <span class="glyphicon glyphicon-envelope"></span><label for="Email">Email:</label><span class="textRed">*</span>
+                        <input id="txtEmail" type="email" class="form-control" placeholder="e.g johndoe@gmail.com" />
+                        <span class="textRed" id="errMessageEmail"></span>
+                    </div>
+                    <div class="form-group">
+                        <span class="glyphicon glyphicon-lock"></span><label for="Password">Password:</label><span class="textRed">*</span>
+                        <input id="txtPassword" type="password" class="form-control" placeholder="your secret password" />
+                        <span class="textRed" id="errMessagePwd"></span>
+                    </div>
+                    <div class="form-group">
+                        <span class="glyphicon glyphicon-lock"></span><label for="Password">Gender:</label><span class="textRed">*</span>
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female<br>
+                        <span class="textRed" id="errMessageGender"></span>
+                    </div>
+                    <div class="form-group">
+                        <span class="glyphicon glyphicon-lock"></span><label for="Password">Courses Joined:</label><span class="textRed">*</span>
+                        <input type="radio" name="Course" value="male"> Java
+                        <input type="radio" name="Course" value="female"> PHP<br>
+                        <span class="textRed" id="errMessageCourse"></span>
+                    </div>
+                    <div class="form-group">
+                        <span class="glyphicon glyphicon-lock"></span><label for="Password">Upload Doubts:</label><span class="textRed">*</span>
+                        <input type="file" name="Doubts" accept="image/*">
+                        <span class="textRed" id="errMessageFile"></span>
+                    </div>
+                    <div class="form-group">
+                        <span class="glyphicon glyphicon-gift"></span><label for="Password">Start Date:</label>
+                        <input id="txtStartDate" type="date" class="form-control" placeholder="mm/dd/yyyy" />
+                        <span class="textRed" id="errMessageStartDate"></span>
+
+                        <span class="glyphicon glyphicon-gift"></span><label for="Password">End Date:</label>
+                        <input id="txtEndDate" type="date" class="form-control" placeholder="mm/dd/yyyy" />
+                        <span class="textRed" id="errMessageEndDate"></span>
+                    </div>
+                    <div class="form-group">
+                        <span class="glyphicon glyphicon-lock"></span><label for="Password">Min Class Hours:</label><span class="textRed">*</span>
+                        <input type="number" name="MinClassHours" min="1" max="10">
+                        <span class="textRed" id="errMessageMinClassHours"></span>
+                    </div>
+                    <div class="form-group">
+                        <span class="glyphicon glyphicon-lock"></span><label for="Password">City:</label><span class="textRed">*</span>
+                        <select>
+                            <option value="volvo">Hyderabad</option>
+                            <option value="saab">Bangalore</option>
+                            <option value="mercedes">Delhi</option>
+                            <option value="audi">Chennai</option>
+                        </select>
+                        <span class="textRed" id="errMessageCity"></span>
+                    </div>
+                    <div class="form-group">
+                        <span class="glyphicon glyphicon-lock"></span><label for="Password">Comments:</label><span class="textRed">*</span>
+                       <textarea rows="6" cols="100"></textarea>
+                    </div>
+
+                </div>
+                <div class="col-sm-6">
+                    
+                    
+                   
+                </div>
+                <div class="col-sm-12">
+                    <button type="submit" onclick="return frmValidate()" class="btn btn-default">Submit</button>
+                </div>
+
+
+            </form>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</body>
+</html>
