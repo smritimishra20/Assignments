@@ -1,0 +1,265 @@
+
+/* These three boxes are for styling the Position1.html file*/
+/*Position1.html - Start*/
+.box1 {
+    width: 100px;
+    height: 100px;
+    background: pink;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background: blue;  
+
+
+    position: relative;
+    bottom: 100px;
+    left: 100px;
+}
+
+.box3 {
+    width: 100px;
+    height: 100px;
+    background: green;
+
+
+    position: relative;
+    bottom: 100px;
+}
+
+/*Position1.html - End*/
+
+/* These three boxes are for styling the Position2.html file*/
+/*Position2.html - Start*/
+.box4 {
+    width: 100px;
+    height: 100px;
+    background: pink;
+}
+
+.box5 {
+    width: 100px;
+    height: 100px;
+    background: blue;
+}
+
+.box6 {
+    width: 100px;
+    height: 100px;
+    background: green;
+}
+/*Position2.html - End*/
+
+/* These three boxes are for styling the Position3.html file*/
+/*Position3.html - Start*/
+.box7 {
+    width: 100px;
+    height: 100px;
+    background: pink;
+}
+
+.box8 {
+    width: 100px;
+    height: 100px;
+    background: blue;
+    position: relative;
+    left:100px;
+}
+
+.box9 {
+    width: 100px;
+    height: 100px;
+    background: green;
+}
+/*Position3.html - End*/
+
+/* These three boxes are for styling the Position4.html file*/
+/*Position4.html - Start*/
+
+/*Position4.html - End*/
+
+/* These three boxes are for styling the Position5.html file*/
+/*Position5.html - Start*/
+.box10 {
+    width: 100px;
+    height: 100px;
+    background: pink;
+
+    position: absolute;
+    top:0%;
+    left:0%;
+}
+
+.box11 {
+    width: 100px;
+    height: 100px;
+    background: blue;
+    position: absolute;
+    top:0%;
+    right:0%;
+}
+
+.box12 {
+    width: 100px;
+    height: 100px;
+    background: green;
+    position: absolute;
+    bottom: 0%;
+    left:0%;
+
+}
+.box13 {
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    position: absolute;
+    bottom: 0%;
+    right:0%;
+}
+
+/*Position5.html - End*/
+
+/* These three boxes are for styling the Position6.html file*/
+/*Position6.html - Start*/
+
+#first {
+    width: 500px;
+    height: 500px;
+    background: green;
+    z-index: -1;
+}
+
+#second{
+    width: 400px;
+    height: 400px;
+    background: red;
+    position: absolute;
+    top:50px;
+    left:50px;
+    z-index: 4;
+}
+
+#third{
+    width: 300px;
+    height: 300px;
+    background: yellow;
+    position: absolute;
+    top:50px;
+    left:50px;
+    z-index: 5;
+}
+
+#fourth{
+    width: 200px;
+    height: 200px;
+    background: orange;
+    position: absolute;
+    top:50px;
+    left:50px;
+    z-index: 6;
+}
+
+#fifth{
+    width: 100px;
+    height: 100px;
+    background: pink;
+    position: absolute;
+    top:50px;
+    left:50px;
+    z-index: 7;
+}
+
+/*Position6.html - End*/
+
+
+/* These three boxes are for styling the Position7.html file*/
+/*Position7.html - Start*/
+.box14 {
+    width: 100%;
+    height: 50px;
+    background: green;
+    position: fixed;
+    bottom: 0;
+    left:0;
+
+}
+.box15 {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    position: absolute;
+    bottom: 50px;
+    left:50px;
+}
+/*Position7.html - End*/
+
+.box16{
+    width: 80%;
+    height: 500px;
+    background: pink;
+    float: left;
+    
+}
+
+.box17{
+    width: 20%;
+    height: 500px;
+    background: green;
+    float: right;
+    
+}
+
+
+/*Google Font --Start*/
+h1,h2,p{
+    font-family: 'Lobster', cursive;
+}
+/*Google Font -- End*/
+
+
+/*Position 7 - Start*/
+.main{
+    width:100%;
+    height:650px;
+    outline:3px white;
+    background-color:#f0fff0;
+}
+
+.box18{
+    height:200;
+    width:200;
+    fill:yellow;
+    position:absolute;
+    left:1250px;
+    stroke:2px red;
+}
+
+.box19{
+    width:200px;
+    height:200px;
+    position:absolute;
+    top:310px;
+    left:50px;
+    background-color: lightpink;
+
+}
+
+.box20{
+    width:98.9%;
+    height:150px;
+    position:absolute;
+    top:510px;
+    background-color: forestgreen;
+}
+
+@media screen and(max-width:400px){
+    .right{
+        width:100%;
+
+    }
+    .left{
+        width:100%;
+    }
+}
+/*Position 7 - End*/
