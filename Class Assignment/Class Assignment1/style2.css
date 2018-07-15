@@ -1,0 +1,71 @@
+.container{
+	width:80%;
+	height:auto;
+	margin:30px;
+}
+
+
+.div1{
+	width:20%;
+	height:500px;
+	float:left;
+	background-color:lightblue;
+
+}
+
+.div2{
+
+	width:.5%;
+	height:500px;
+	float:left;
+	background-color:black;
+
+}
+
+.div3{
+
+	width:79.5%;
+	height:500px;
+	float:right;
+	background-color:lightblue;
+
+
+}
+
+.div4{
+
+	width:40%;
+	height:300px;
+	margin:50px;
+	
+
+}
+
+
+li{
+	margin:30px;
+}
+
+hr{
+	width:200px;
+}
+
+h3{
+	margin:50px;
+	color: blue;
+}
+
+#divLogin{
+	border: 1px solid black;
+	height:200px;
+	width:200px;
+	padding: 60px;
+	position: absolute;
+	left:40%;
+	top:25%;
+	background-color: lightblue;
+}
+
+
+
+}

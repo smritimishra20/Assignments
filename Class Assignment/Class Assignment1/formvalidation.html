@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+	<title>form validation</title>
+	<link href="style2.css"type="text/css"rel="stylesheet">
+</head>
+
+<body>
+
+
+<form>
+
+<div id="divLogin">
+
+	Username:<input type="text" size="15" name="userid" id="txtUserid"/>
+	<p id="urvalidation" style="color:red;"></p>
+	<br/>
+	Password:<input type="password" size="15" name="pwd" id="txtPassword"/>
+	<p id="Pwdvalidation" style="color:red;"></p><br/>
+	<button type="reset" value="Reset" onclick="ClearData()">Reset</button>
+	<input type="button" value="Submit" onclick="formSubmit()" /> 
+	
+</div>
+</form>
+
+<script>
+	function formSubmit(){
+		var Username=document.getElementById('txtUserid').value;
+		var Password=document.getElementById('txtPassword').value;
+		var isValidLogin=true;
+
+		if (Password==""){
+			document.getElementById("Pwdvalidation").innerHTML="Please enter password";
+			isValidLogin=false;
+
+		}
+		if(Username==""){
+			document.getElementById("urvalidation").innerHTML="Please enter username";
+			isValidLogin=false;
+		}
+
+		if(isValidLogin == true){
+			location.href= "formvalidation pg2.html";
+		}
+		else
+			return;
+	}
+
+	function ClearData()
+	{
+		document.getElementById("txtUserid").value="";
+		document.getElementById("txtPassword").value="";
+		document.getElementById("urvalidation").innerHTML="";
+		document.getElementById("Pwdvalidation").innerHTML="";
+
+	}
+</script>
+</body>
+</html>
