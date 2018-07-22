@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<title>Javascript - Task5</title>
+</head>
+
+<body>
+	
+	Yes <input type="radio" name="option" value="Yes" onchange="YesChange()" /> 
+	No <input type="radio" name="option" value="No"  onchange="NoChange()" /> 
+
+<div id="yesDiv" style="display:none">If yes, explain : <input type="text" /> <br>
+What can we do to accomodate you? <input type="text" /> <br> </div>
+<div id="noDiv"  style="display:none">
+other: <input type="text" /> <br></div>
+
+
+
+
+
+
+<script>
+	
+	function YesChange()
+	{
+		document.getElementById("yesDiv").style.display = "block";
+		document.getElementById("noDiv").style.display = "none";
+	}
+	
+	function NoChange()
+	{
+		document.getElementById("noDiv").style.display = "block";
+		document.getElementById("yesDiv").style.display = "none";
+	}
+
+</script>
+</body>
+</html>

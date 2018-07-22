@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<title>Random password</title>
+</head>
+<body>
+
+<form name="pgenerate">
+<input type="text" name="output">
+
+<input type="button" value="generatePassword" onclick="populateform(this.form.thelength.value)">
+<br>
+<br>
+
+<b>password:</b>
+<input type="text" name="thelength" value="8" >
+
+</form>
+
+<script>
+  var keylist="abcdefghijklmnopqrstuvwxyz123456789!@#$%^&*()_+-;/,']["
+  var temp=''
+
+  function generatepass(plength){
+    temp=''
+    for (i=0;i<plength;i++)
+
+      temp+=keylist.charAt(Math.floor(Math.random()*keylist.length))
+
+    return temp
+  }
+
+  function populateform(enterlength) {
+    document.pgenerate.output.value=generatepass(enterlength)
+  }
+
+</script>
+
+
+
+
+</body>
+</html>

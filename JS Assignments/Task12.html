@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<title>Javascript - Task12</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+
+<body>
+	
+Username: <input type="text" id="txtUserName" /> 
+<input type="submit" value="Submit" onclick="FormSubmit()" />
+<p id="usrval" style="color:red"; ></p> 
+	
+	<script>
+		
+		function FormSubmit(){
+			var username = document.getElementById("txtUserName").value;
+			
+			
+			if(username.length <= 7)
+			{
+				document.getElementById("usrval").innerHTML = "Username need to be longer than 7 characters"
+			}
+			else{
+				document.getElementById("usrval").innerHTML="";
+			}
+		}
+		
+	</script>
+</body>
+</html>

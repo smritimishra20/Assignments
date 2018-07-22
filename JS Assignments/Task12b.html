@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+	<title>Javascript - Task12b</title>
+	<link href="FormStyle.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+	
+
+	<h2>User Registration Form</h2> <br>
+
+	<div id="labels">
+		User Id:<br><br>
+		Password: <br> <br>
+		Name: <br> <br>
+		Address: <br> <br>
+		Country: <br> <br>
+		ZIP Code: <br> <br>
+		Email: <br> <br>
+		Gender: <br> <br>
+		Language: <br> <br>
+		About: <br> <br>
+
+
+
+	</div>
+
+	<div id="DataDiv">
+		<input type="text" id="txtUserName" /> 
+<label id="UserIdval" style="color:red"; ></label> <br><br>
+
+<input type="password" id="txtPassword" /> 
+<label id="Passwordval" style="color:red"; ></label><br><br> 
+
+ <input type="text" id="txtName" /> 
+<label id="Nameval" style="color:red"; ></label><br><br> 
+
+<input type="text" id="txtAddress" /> 
+<label id="Addressval" style="color:red"; ></label> <br><br>
+
+ <select id="ddlCountry">
+	<option value="">(Please select a country)</option>
+	<option value="India">India</option>
+	<option value="USA">USA</option>
+	<option value="England">England</option>
+	<option value="Australia">Australia</option>
+	</select>
+	<label id="Countryval" style="color:red"; ></label> <br><br>
+
+ <input type="text" id="txtZipCode" /> 
+ <label id="ZipCodeval" style="color:red"; ></label> <br><br>
+
+ <input type="text" id="txtEmail" /> 
+ <label id="Emailval" style="color:red"; ></label> <br><br>
+
+ <input type="radio" id="radioMale" name="gender" value="male"> Male
+ <input type="radio" id="radioFemale" name="gender" value="female"> Female
+ <label id="Genderval" style="color:red"; ></label> <br><br>
+
+ <input type="checkbox" id="chkEnglish" name="Language" value="English"> English
+ <input type="checkbox" id="chkNonEnglish" name="Language" value="NonEnglish"> Non English
+ <label id="Languageval" style="color:red"; ></label> <br><br>
+
+ <textarea rows="6" cols="25"></textarea><br><br>
+
+<input type="submit" value="Submit" onclick="FormSubmit()" />
+
+	</div>
+
+
+	
+	<script>
+		
+		function FormSubmit(){
+			var UserId=document.getElementById('txtUserName').value;
+			var Password=document.getElementById('txtPassword').value;
+			var Name=document.getElementById('txtName').value;
+			
+			var Country=document.getElementById('ddlCountry').value;
+			var ZipCode=document.getElementById('txtZipCode').value;
+			var Email=document.getElementById('txtEmail').value;
+
+			var Gender="";
+			if(document.getElementById("radioMale").checked == true)
+			{
+				Gender = "Male";
+			}
+			else if(document.getElementById("radioFemale").checked == true)
+			{
+				Gender = "Female";
+			}
+			
+			var isLanguageSelected=false
+			if(document.getElementById("chkEnglish").checked == true ||
+				document.getElementById("chkEnglish").checked == true )
+			{
+				isLanguageSelected=true;
+			}
+			
+
+			if(UserId.length==0)
+			{
+				document.getElementById("UserIdval").innerHTML = "Required"
+			}
+			else if(UserId.length<5 || UserId.length>12){
+				document.getElementById("UserIdval").innerHTML="UserId must be Beween 5  and 12 characters";
+			}
+			else{
+				document.getElementById("UserIdval").innerHTML="";
+			}
+
+			if(Password.length==0)
+			{
+				document.getElementById("Passwordval").innerHTML = "Required"
+			}
+			else if(Password.length<7 || Password.length>12){
+				document.getElementById("Passwordval").innerHTML="Password must be Beween 7  and 12 characters";
+			}
+			else{
+				document.getElementById("Passwordval").innerHTML="";
+			}
+
+			var regex=/^[a-zA-Z]*$/;
+			if(Name==""){
+				document.getElementById("Nameval").innerHTML="Name is Required.";
+			}
+			else if (!regex.test(Name))
+			{
+				document.getElementById("Nameval").innerHTML="Alphabets only.";
+			}
+			else
+			{
+				document.getElementById("Nameval").innerHTML="";
+			}
+
+			if(Country=="")
+			{
+				document.getElementById("Countryval").innerHTML="Please select a country.";
+			}
+			else
+			{
+				document.getElementById("Countryval").innerHTML="";
+			}
+
+			var regexZipcode=/^\d{5}$|^\d{5}-\d{4}$/;
+			if(ZipCode == "")
+			{
+				document.getElementById("ZipCodeval").innerHTML="Please enter the zipcode";
+			}
+			else if (!regexZipcode.test(ZipCode))
+			{
+				document.getElementById("ZipCodeval").innerHTML="Numbers only.";
+			}
+			else
+			{
+				document.getElementById("ZipCodeval").innerHTML="";
+			}
+
+
+			var regexEmail=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			if(Email == "")
+			{
+				document.getElementById("Emailval").innerHTML="Please enter the Email";
+			}
+			else if (!regexEmail.test(Email))
+			{
+				document.getElementById("Emailval").innerHTML="Enter a valid email.";
+			}
+			else
+			{
+				document.getElementById("Emailval").innerHTML="";
+			}
+
+			if(Gender=="")
+			{
+				document.getElementById("Genderval").innerHTML="Please select the gender.";
+			}
+			else{
+				document.getElementById("Genderval").innerHTML="";
+			}
+
+			if(isLanguageSelected == false)
+			{
+				document.getElementById("Languageval").innerHTML="Please select the Language.";
+			}
+			else
+			{
+				document.getElementById("Languageval").innerHTML="";
+			}
+			
+
+			
+		}
+		
+	</script>
+</body>
+</html>

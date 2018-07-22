@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+	<title>Javascript - Task1</title>
+</head>
+
+<body>
+	
+	<h3 id="question">Which country are you from?</h3>
+	
+	<input id="btnCheckAnswer" type="submit" value="Check Answer" onclick="ShowAnswer()" />
+
+<hr>
+
+<h2>where is hyderabad</h2>
+
+<ol type="a">
+	<li>Telangana</li>
+	<li>Delhi</li>
+	<li>kolkta</li>
+
+</ol>
+
+
+<button type="button" onclick="myFunction()">Show Answer</button>
+
+<p id="demo"></p>
+
+
+
+
+
+	<script type="text/javascript">
+		
+		function ShowAnswer()
+		{
+			document.getElementById("question").innerHTML = "I am from India";
+		}
+
+		function myFunction() {
+    	//document.getElementById("demo").innerHTML = "Answer.Telangana.";
+
+	    var list = document.getElementsByTagName("ol")[0];
+	    var answer = list.getElementsByTagName("li")[0].innerHTML;
+	   
+	    document.getElementById("demo").innerHTML = answer;
+		}
+
+	</script>
+</body>
+</html>

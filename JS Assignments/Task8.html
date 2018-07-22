@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+	<title>Javascript - Task7</title>
+	<style type="text/css">
+		table{
+			width:50%;
+			height: 60px;
+			border: 1px solid black;
+		}
+		td{
+
+			border: 1px solid black;
+			height: 20px;
+		}
+
+		.odd{background-color: lightgreen;} 
+  		.even{background-color: pink;}
+
+		/*tr:nth-child(odd) {
+    		background-color: lightgreen;
+		}
+		tr:nth-child(even) {
+    		background-color: pink;
+		}*/
+
+		
+	</style>
+</head>
+
+<body>
+	
+	<table id="table1"> 
+	<tr class="odd">
+		<td>one</td>
+		
+	</tr> 
+	<tr class="even">
+		<td>two</td>
+		
+	</tr> 
+  	<tr class="odd">
+  		<td>three</td>
+  		
+  	</tr> 
+  	    
+	</table>
+	<br>
+
+	<button onclick="ResetOddNumbers()">Reset Odd Numbers</button> 
+	<button onclick="ResetEvenNumbers()">Reset Even Numbers</button> 
+
+	<script>
+
+
+		function ResetOddNumbers(){
+			var rows= document.getElementsByTagName("tr");
+
+			for(var i=0 ;i<rows.length ;i++ )
+			{
+				if(i % 2 != 0){ 
+        	document.getElementsByClassName("odd")[i].style.backgroundColor = "white";
+        		}
+      					
+			}
+
+		}
+
+		function ResetEvenNumbers() {
+			var rows= document.getElementsByTagName("tr");
+
+			for(var i =0 ;i<rows.length ;i++ )
+			{
+				if(i % 2 == 0){ 
+        	document.getElementsByClassName("odd")[i].style.backgroundColor = "white";
+        		}
+      					
+			}
+		}
+	</script>
+</body>
+</html>

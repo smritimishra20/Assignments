@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+	<title>Javascript - Task11</title>
+	<style type="text/css">
+		.reddiv{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+
+		}
+		.counterDiv{
+			font-size: 100px;
+			float: left;
+			padding-left: 10px;
+		}
+		.likeDiv{
+			font-size: 100px;
+			float: left;
+			padding-left: 10px;
+		}
+		img{
+			height:100px;
+			width:100px;
+			cursor: pointer;
+			float: left;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="div1" class="reddiv"  onclick="ShowAlert()">
+	</div>
+
+	<hr>
+
+	<img src="like.png" alt="Like me"  onclick="IncreaseCounter()"/>
+	<div id="div2" class="counterDiv">
+		0 
+	</div>
+	<div class="likeDiv">
+		Likes 
+	</div>
+
+
+	
+	<script>
+		function ShowAlert()
+		{
+			var backgroundcolor;
+			var height;
+			var width;
+
+			backgroundcolor = document.getElementById("div1").style.backgroundColor;
+
+			height=document.getElementById("div1").clientHeight;
+			width=document.getElementById("div1").clientWidth;
+
+			alert("Background Color: " + backgroundcolor + ", " + "Height: " + height + " Width: " + width  );
+
+		}
+
+		function IncreaseCounter()
+		{
+			var i = document.getElementById("div2").innerHTML;
+			i++;
+			document.getElementById("div2").innerHTML =i;
+		}
+
+		
+	</script>
+</body>
+</html>

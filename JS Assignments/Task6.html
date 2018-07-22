@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+	<title>Javascript - Task4</title>
+	<style type="text/css">
+		body{
+			background-color: lightblue;
+		}
+
+		.div1{
+			float: left;
+			height: 200px;
+			width: 200px;
+		}
+		.div2{
+			height: 200px;
+			width: 200px;
+			border: 1px solid black;
+			float: left;
+			background-color: white;
+		}
+	</style>
+</head>
+
+<body>
+	<h3> what background color would you like..?</h3>
+	
+	Select Color: 
+	<select id="ddlColor" onchange="ChangeColor()">
+	<option>White</option>
+	<option>Aqua</option>
+	<option>Pink</option>
+	<option>Silver</option>
+	</select>
+	
+
+	<hr>
+
+	<h3> Change the color of the div on radio button change</h3>
+
+	Choose one: <br>
+	<div class="div1">
+	<input type="radio" name="color" value="red" checked> red<br>
+  	<input type="radio" name="color" value="green"> green<br>
+  	<input type="radio" name="color" value="blue"> blue <br>
+
+  	<button onclick="ChangeDivColor()">Go</button>  
+	</div>
+	
+  	<div id="div2" class="div2"></div> 
+
+	<script>
+		function ChangeColor()
+		{
+			var selectedValue =  document.getElementById("ddlColor").value
+			document.body.style.backgroundColor=selectedValue;
+		}
+
+		function ChangeDivColor()
+		{
+			var radiobuttons = document.getElementsByName("color");
+			var color;
+			for(var r=0; r<radiobuttons.length;r++)
+			{
+				if(radiobuttons[r].checked==true)
+				{
+					color=radiobuttons[r].value;
+					break;
+				}
+
+			}
+
+			document.getElementById("div2").style.backgroundColor= color;
+		}
+	</script>
+</body>
+</html>

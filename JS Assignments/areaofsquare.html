@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js Task3</title>
+
+
+</head>
+
+<body>
+<h1>Area of a square</h1>
+
+Enter Side: <input id="squareSide" type="text" /> <br>
+
+<button type="button" onclick="calculateArea()">Calculate</button> <br>
+
+Answer: <input id="areaAnswer" type="text" /> <br>
+ 
+<hr>
+
+
+
+<script>
+function calculateArea() {
+  var side = document.getElementById("squareSide").value;
+    var area = side*side;
+  
+    document.getElementById("areaAnswer").value = area;
+}
+
+
+
+</script>
+
+</body>
+</html>
+

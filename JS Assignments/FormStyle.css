@@ -1,0 +1,20 @@
+#labels, #DataDiv
+{
+    display: table-cell;
+}
+
+/* Left-justifying labels and DataDiv, and ensuring that DataDiv is next to labels */
+#labels
+{
+    float: left;
+    text-align: right;
+    width: 100px;
+    height: 200px;
+}
+
+#DataDiv
+{
+    width: 500px;
+    height: 200px;
+    /* float: left; */
+}

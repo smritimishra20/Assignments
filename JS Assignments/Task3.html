@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js Task3</title>
+
+
+</head>
+
+<body>
+
+<button type="button" onclick="squareNumber(3)">Click Me</button>
+ 
+<hr>
+
+
+1st Number: 
+  <input id="txt1stNumber" type="text" name="firstNumber">
+  <br>
+   <br>
+  2nd Number:
+  <input  id="txt2ndNumber" type="text" name="secondnumber">
+ <br>
+  <br>
+
+<button type="button" onclick="multiply()">Multiply</button>
+<button type="button" onclick="divide()">Divide</button>
+
+ <br>
+ The Result is: 
+ <p id="output" />
+
+<hr>
+
+<script>
+function squareNumber(num) {
+    var result = num*num;
+    console.log("The result of squaring the number " + num + " is " + result);
+    return result;
+}
+
+function multiply() {
+   var firstnumber = document.getElementById("txt1stNumber").value;
+    var secondnumber = document.getElementById("txt2ndNumber").value;
+    var result = firstnumber*secondnumber;
+    document.getElementById("output").innerHTML = result;
+   
+}
+
+function divide() {
+    var firstnumber = document.getElementById("txt1stNumber").value;
+    var secondnumber = document.getElementById("txt2ndNumber").value;
+    var result = firstnumber/secondnumber;
+    document.getElementById("output").innerHTML = result;	
+
+}
+</script>
+
+</body>
+</html>
+
